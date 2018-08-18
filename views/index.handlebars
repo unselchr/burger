@@ -42,6 +42,8 @@
             event.preventDefault();
             $.post("/api", { name: $("#newBurger").val().trim() },function(){
                 location.reload(true);
+            }).then(function(){
+                location.reload(true);
             });
         })
         $("#devour").on("click",function(event){
@@ -53,7 +55,9 @@
                     console.log("ate a burger");
                     location.reload(true);
                 }
-            })
+            }).then(function(){
+                location.reload(true);
+            });
         })
     })
 </script>
