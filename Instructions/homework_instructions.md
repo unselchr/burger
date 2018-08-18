@@ -221,5 +221,7 @@ This is a really tough homework assignment, but we want you to put in your best 
 If you have any questions about this project or the material we have covered, please post them in the community channels in slack so that your fellow developers can help you! If you're still having trouble, you can come to office hours for assistance from your instructor and TAs.
 
 
-mysql://b3596842a7975d:3816f549@us-cdbr-iron-east-01.cleardb.net/heroku_4afa5abc3a63fa0?reconnect=true
+heroku config:add DATABASE_URL=mysql://b3596842a7975d:3816f549@us-cdbr-iron-east-01.cleardb.net/heroku_4afa5abc3a63fa0?reconnect=true
 **Good Luck!**
+
+mysql --host=us-cdbr-east.cleardb.com --user=b3596842a7975d --password=3816f549 --reconnect heroku_4afa5abc3a63fa0 < schema.sql
