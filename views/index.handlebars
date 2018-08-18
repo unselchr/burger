@@ -41,7 +41,7 @@
         $("#submit").on("click", function (event) {
             event.preventDefault();
             $.post("/api", { name: $("#newBurger").val().trim() },function(){
-                location.reload();
+                location.reload(true);
             });
         })
         $("#devour").on("click",function(event){
@@ -51,7 +51,7 @@
                 type:"PUT",
                 success:function(){
                     console.log("ate a burger");
-                    location.reload();
+                    location.reload(true);
                 }
             })
         })
