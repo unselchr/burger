@@ -39,7 +39,6 @@
     $(document).ready(function () {
         console.log("doc ready");
         $("#submit").on("click", function (event) {
-            event.preventDefault();
             $.post("/api", { name: $("#newBurger").val().trim() },function(){
                 location.reload(true);
             }).then(function(){
@@ -47,7 +46,6 @@
             });
         })
         $("#devour").on("click",function(event){
-            event.preventDefault();
             $.ajax({
                 url:"/api",
                 type:"PUT",
